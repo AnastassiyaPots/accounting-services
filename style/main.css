@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,20 @@ a {
 
 li {
   list-style: none;
+}
+
+h1 {
+  font-size: 48px;
+  color: #FFFFFF;
+  font-family: "Merriweather";
+  font-weight: 700;
+  line-height: 138.3%;
+}
+
+h2 {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 48px;
 }
 
 .wrapper {
@@ -83,6 +98,7 @@ li {
   gap: 16px 68px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 }
 .header__item {
   text-transform: uppercase;
@@ -121,7 +137,150 @@ li {
 
 .contant {
   flex: 1 0 auto;
+  /* background-color: $color-background; */
+}
+
+.first {
+  background-image: url("../../images/first.jpg");
+  max-width: 100%;
+  height: 680px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 170px 0 0;
+}
+.first .wrapper h1 {
+  max-width: 36.25rem;
+  font-size: calc(30px + 1.6071428571vw);
+}
+.first .wrapper .button {
+  margin-top: 80px;
+}
+@media (min-width: 1121px) {
+  .first .wrapper h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1120px) and (min-width: 321px) {
+  .first .wrapper {
+    font-size: calc(30px + 1.6071428571vw);
+  }
+}
+@media (max-width: 576px) {
+  .first .wrapper h1 {
+    font-size: 30px;
+  }
+}
+
+.button {
+  background-color: #005FA3;
+  height: 60px;
+  padding: 0 56px;
+  color: #FFFFFF;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 18px;
+}
+.button:hover {
+  background-color: #035996;
+}
+
+.comment {
+  padding: 140px 0 250px;
+}
+.comment .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 80px;
+}
+.comment__header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 40px;
+}
+.comment__header p {
+  color: #BDBDBD;
+  font-size: 24px;
+  font-weight: 700;
+}
+.comment__conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 58px;
   background-color: #EBEBEB;
+  padding: 45px 95px;
+  max-width: 100%;
+}
+.comment__text {
+  font-size: calc(16px + 0.1785714286vw);
+  line-height: 138%;
+  font-weight: 300;
+  max-width: 920px;
+}
+.comment__box {
+  display: flex;
+  column-gap: 35px;
+}
+.comment__case {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  row-gap: 10px;
+}
+.comment__img {
+  width: 80px;
+}
+.comment__img img {
+  width: 100%;
+  border-radius: 50%;
+}
+.comment__name {
+  font-weight: 700;
+  font-size: 18px;
+}
+.comment__element {
+  font-size: 14px;
+  color: #4F4F4F;
+}
+@media (min-width: 1121px) {
+  .comment h2 {
+    font-size: 48px;
+  }
+  .comment__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1120px) and (min-width: 321px) {
+  .comment {
+    font-size: calc(30px + 1.6071428571vw);
+    font-size: calc(16px + 0.1785714286vw);
+  }
+}
+@media (max-width: 576px) {
+  .comment {
+    padding: 70px 0 70px;
+  }
+  .comment__conteiner {
+    padding: 22.5px 47.5px;
+  }
+  .comment h2 {
+    font-size: 30px;
+  }
+  .comment__conteiner {
+    row-gap: 29px;
+  }
+  .comment__box {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .comment__text {
+    font-size: 16px;
+  }
 }
 
 .footer {
